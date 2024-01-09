@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ProfileHost: View {
+    
+    @State private var defaultProfile = Profile.default
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10) {
+            ProfileSummary(profile: defaultProfile)
+        }
+        .padding()
     }
 }
 
